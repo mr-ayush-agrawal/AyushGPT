@@ -23,4 +23,4 @@ Till here we were setting up the variables and now we will style
     span.material-symbols-rounded -> For coppy button
         Disabling the selection
     .chat:hover -> is applicable when it is hovered to chat selection
-        
+We Created the dots and animated them as per the required animation
