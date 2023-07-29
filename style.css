@@ -9,6 +9,7 @@
     font: "Poppins", sans-serif;
 }
 
+/* Setting up the variables and the colors */
 :root {
     --text-color: #FFFFFF;
     --icon-color: #ACACBE;
@@ -18,4 +19,69 @@
     --in-chat-bg: #444654;
     --out-chat-border: #343541;
     --in-chat-border: #444654;
+}
+
+/* Styling begins Here */
+body {
+    background-color: var(--out-chat-bg);
+}
+
+.chat_container .chat{
+    color: var(--text-color);
+    padding: 25px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.chat_container .chat.out{
+    background: var(--out-chat-bg);
+    border: 1px solid  var(--out-chat-border);
+}
+
+.chat_container .chat.in{
+    background: var(--in-chat-bg);
+    border: 1px solid  var(--in-chat-border);
+}
+
+.chat .chat_details{
+    display: flex;
+    align-items: center;
+}
+
+.chat .chat_content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.chat .chat_content span{
+    color: var(--icon-color);
+    visibility: hidden;
+    font-size: 1.3rem;
+}
+
+/* This action will be performed when we hover over the icon */
+.chat:hover .chat_content span{
+    visibility: visible;
+}
+
+
+.chat .chat_details p{
+    padding: 0 50px 0 25px;
+    white-space: pre-wrap;
+    font-size: 1.05rem;
+}
+
+.chat .chat_details img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+span.material-symbols-rounded {
+    user-select: none;
+    cursor: pointer;
 }

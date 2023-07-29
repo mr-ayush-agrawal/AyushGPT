@@ -10,10 +10,17 @@ We need to link the files that we are using in the program in the head
 
 CSS
 Need to import the Fonts that we are willing to use 
-* 
-    Default setting for the items
+    * 
+        Default setting for the items
 
-root : This selects the root element of the index -> Generally <HTML>
-    This is for Applying it throughout the document.
-    Setting up different colors throughout the documents as per the need.
-    
+    root : This selects the root element of the index -> Generally <HTML>
+        This is for Applying it throughout the document.
+        Setting up different colors throughout the documents as per the need.
+        these are going to act as the variables
+Till here we were setting up the variables and now we will style
+    body : setting feature for the body
+    . -> Setting up the features of the classes as per the requirements
+    span.material-symbols-rounded -> For coppy button
+        Disabling the selection
+    .chat:hover -> is applicable when it is hovered to chat selection
+        
