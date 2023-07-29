@@ -79,6 +79,7 @@ body {
     height: 35px;
     object-fit: cover;
     border-radius: 2px;
+    align-self: flex-start;
 }
 
 span.material-symbols-rounded {

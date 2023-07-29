@@ -10,6 +10,9 @@ Creating Text area where we can type and get the input
     textarea : Place to enter the text
     creating button using span.
 
+We Can put any number of words for the test purpose.
+    lorem<No_of_Words> -> to input any random text to the content
+
 CSS
 Need to import the Fonts that we are willing to use 
     * 
