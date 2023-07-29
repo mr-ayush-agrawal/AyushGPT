@@ -26,6 +26,25 @@ body {
     background-color: var(--out-chat-bg);
 }
 
+.chat_container {
+    max-height: 100vh;
+    padding-bottom: 150px;
+    overflow-y: auto;
+}
+
+/* Next 3 blocks are for custom schroll bar */
+:where(.chat_container, textarea)::-webkit-scrollbar{
+    width: 6px;
+}
+:where(.chat_container, textarea)::-webkit-scrollbar-track{
+    background: var(--in-chat-bg);
+    border-radius: 25px;
+}
+:where(.chat_container, textarea)::-webkit-scrollbar-thumb{
+    background: var(--icon-color);
+    border-radius: 25px;
+}
+
 .chat_container .chat{
     color: var(--text-color);
     padding: 25px 10px;
