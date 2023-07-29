@@ -116,3 +116,77 @@ span.material-symbols-rounded {
         transform: translateY(-7px);
     }
 }
+
+/* Styling the typing container */
+.typingContainer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: var(--out-chat-bg);
+    border: 1px solid var(--in-chat-border);
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+.typingContent {
+    max-width: 950px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.textBox {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    height: 55px;
+    border: none;
+    background: var(--in-chat-bg);
+    resize: none;
+    color: var(--text-color);
+    outline: 1px solid var(--in-chat-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 15px 45px 15px 20px;
+}
+
+textarea::placeholder{
+    color: var(--placeholder-color);
+}
+
+textarea:valid ~ span {
+    visibility: visible;
+}
+
+.typingContent span {
+    height: 55px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--icon-color);
+}
+
+.typingControl {
+    display: flex;
+}
+
+.typingControl span{
+    background: var(--in-chat-bg);
+    border: 1px solid var(--in-chat-border);
+    margin-left: 7px;
+    font-size: 1.4rem;
+    border-radius: 4px;
+}
+
+.textBox span{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+}

@@ -6,7 +6,9 @@ We need to link the files that we are using in the program in the head
     Here linking the following files   
         - Style for CSS styling
         - Symbol - Copy symbol
-
+Creating Text area where we can type and get the input
+    textarea : Place to enter the text
+    creating button using span.
 
 CSS
 Need to import the Fonts that we are willing to use 
