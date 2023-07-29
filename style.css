@@ -21,6 +21,17 @@
     --in-chat-border: #444654;
 }
 
+.lightMode {
+    --text-color: #343541;
+    --icon-color: #A9A9BC;
+    --icon-hover-bg: #F1F1F3;
+    --placeholder-color: #9F9F9F;
+    --out-chat-bg: #FFF;
+    --in-chat-bg: #F7F7F8;
+    --out-chat-border: #FFF;
+    --in-chat-border: #D9D(E3);
+}
+
 /* Styling begins Here */
 body {
     background-color: var(--out-chat-bg);
