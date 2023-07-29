@@ -1,0 +1,19 @@
+HTML
+We need to link the files that we are using in the program in the head 
+    We use the <link> tag to do so.
+    We have to define the relation and reference
+
+    Here linking the following files   
+        - Style for CSS styling
+        - Symbol - Copy symbol
+
+
+CSS
+Need to import the Fonts that we are willing to use 
+* 
+    Default setting for the items
+
+root : This selects the root element of the index -> Generally <HTML>
+    This is for Applying it throughout the document.
+    Setting up different colors throughout the documents as per the need.
+    

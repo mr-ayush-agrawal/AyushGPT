@@ -1,0 +1,21 @@
+/* Importing the font - Poppin Semi-Bold 600 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* Setting properties throughout the page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: "Poppins", sans-serif;
+}
+
+:root {
+    --text-color: #FFFFFF;
+    --icon-color: #ACACBE;
+    --icon-hover-bg: #5B5E71;
+    --placeholder-color: #CCCCCC;
+    --out-chat-bg: #343541;
+    --in-chat-bg: #444654;
+    --out-chat-border: #343541;
+    --in-chat-border: #444654;
+}
