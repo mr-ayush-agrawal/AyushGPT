@@ -73,15 +73,20 @@ const handleOutchat = (e) => {
     userText = chatInput.value.trim();  // Gets the chat input and removes extra spaces
     console.log(userText);
 
+    // If Input is empty return here
+    if(!userText)
+        return; 
+
     const html = `<div class="chat_content">
                     <div class="chat_details">
                         <img src="Files/user.png" alt="User Profile Image">
-                        <p>${userText}</p>
+                        <p></p>
                     </div>
                 </div>`;
 
     // create an out chat div with users message and append it to the chat container
     const outChatDiv = createElement(html, 'out');
+    outChatDiv.querySelector("p").textContent = userText;
     chatContainer.appendChild(outChatDiv)
 
     setTimeout(showTypingAnimation, 500);
