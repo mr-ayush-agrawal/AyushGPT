@@ -6,6 +6,7 @@ const delBtn = document.querySelector("#delButton");
 
 let userText = null
 const API_KEY = "";
+const initialHeight = chatInput.scrollHeight;
 
 const loadDataFromLocalStorage = () => {
     const themeColor = localStorage.getItem("theme-color");
@@ -114,6 +115,11 @@ const handleOutchat = () => {
     if(!userText)
         return; 
 
+    // Once the msg is sent reset the height to initial
+    chatInput.value = "";
+    chatInput.style.height = `${initialHeight}px`;
+    
+
     const html = `<div class="chat_content">
                     <div class="chat_details">
                         <img src="Files/user.png" alt="User Profile Image">
@@ -147,12 +153,19 @@ delBtn.addEventListener("click", () => {
     }
 });
 
-const initialHeight = chatInput.scrollHeight;
-
 chatInput.addEventListener("input", () => {
     // Adjust the height of the input feild dynamacially based on its content
     chatInput.style.height = `${initialHeight}px`;
     chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+
+// Setting up the keys to presses for the shortcuts
+chatInput.addEventListener("keydown", (e) => {
+    if(e.key === 'Enter' && !e.shiftKey && window.innerWidth > 800) {
+        e.preventDefault();
+        // Calling the same function called when button is pressed
+        handleOutchat();
+    }
 });
 
 sendBtn.addEventListener("click", handleOutchat);

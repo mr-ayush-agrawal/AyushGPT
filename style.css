@@ -252,7 +252,6 @@ textarea:valid ~ span {
     font-size: 1.1rem;
 }
 
-
 #Chat_Input {
     max-height: 25vh;
 }
