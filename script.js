@@ -7,7 +7,13 @@ let userText = null
 const API_KEY = "";
 
 const loadDataFromLocalStorage = () => {
+    const themeColor = localStorage.getItem("theme-color");
+
+    document.body.classList.toggle("lightMode", themeColor=== 'lightMode');
+    themeBtn.innerText = document.body.classList.contains("lightMode") ? "dark_mode" : "light_mode"
+
     chatContainer.innerHTML =  localStorage.getItem("all-chats");
+    chatContainer.scrollTo(0,chatContainer.scrollHeight);
 }
 
 loadDataFromLocalStorage();
@@ -56,6 +62,8 @@ const getChatResponse = async(inChatDiv) => {
     inChatDiv.querySelector(".typingAnimation").remove();
     inChatDiv.querySelector(".chat_details").appendChild(pElement);
 
+    chatContainer.scrollTo(0,chatContainer.scrollHeight);
+
     // Saving the responses in local system
     localStorage.setItem("all-chats",chatContainer.innerHTML);
 
@@ -87,6 +95,8 @@ const showTypingAnimation = () => {
     const inChatDiv = createElement(html, 'in');
     chatContainer.appendChild(inChatDiv)
 
+    chatContainer.scrollTo(0,chatContainer.scrollHeight);
+    
     getChatResponse(inChatDiv);
 }
 
@@ -110,11 +120,14 @@ const handleOutchat = () => {
     outChatDiv.querySelector("p").textContent = userText; 
     chatContainer.appendChild(outChatDiv);
 
+    chatContainer.scrollTo(0,chatContainer.scrollHeight);
+
     setTimeout(showTypingAnimation, 500);
 }
 
 themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("lightMode");
+    localStorage.setItem("theme-color",themeBtn.innerText);
     themeBtn.innerText = document.body.classList.contains("lightMode") ? "dark_mode" : "light_mode"
 });
 
