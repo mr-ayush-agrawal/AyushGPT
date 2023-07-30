@@ -1,6 +1,6 @@
 const chatInput = document.querySelector("#Chat_Input");
 const sendBtn = document.querySelector("#sendButton");
-const chatContainer = document.querySelector("#chat_container");
+const chatContainer = document.querySelector(".chat_container");
 
 let userText = null
 const API_KEY = "";
@@ -8,14 +8,14 @@ const API_KEY = "";
 const createElement = (html, className) => {
     // Create new div and apply caht specified calss and set html content to div
     const chatDiv = document.createElement("div");
-    chatDiv.classList.add("chat")
+    chatDiv.classList.add("chat",className);
     chatDiv.innerHTML = html;
     return chatDiv;
     // Retruning the chatDiv
 }
 
 const getChatResponse = async(inChatDiv) => {
-    const API_URL = "https://api.openai.com/v1/completions"; 
+    const API_URL = "https://api.openai.com/v1/chat/completions"; 
     const pElement = document.createElement("p");
 
     // Setting up the properties of API request
@@ -37,9 +37,9 @@ const getChatResponse = async(inChatDiv) => {
 
     // send post request to API, get response and set the response as paragraph element text
     try{
-        const response = await(await fetch(API_URL, requestOptions)).JSON();
+        const response = await(await fetch(API_URL, requestOptions)).json();
         pElement.textContent = response.choices[0].text.trim();
-
+        // console.log(response);
     } catch(error){
         console.log(error);
     }
@@ -69,9 +69,9 @@ const showTypingAnimation = () => {
     getChatResponse(inChatDiv);
 }
 
-const handleOutchat = (e) => {
+const handleOutchat = () => {
     userText = chatInput.value.trim();  // Gets the chat input and removes extra spaces
-    console.log(userText);
+    // console.log(userText);
 
     // If Input is empty return here
     if(!userText)
@@ -85,9 +85,9 @@ const handleOutchat = (e) => {
                 </div>`;
 
     // create an out chat div with users message and append it to the chat container
-    const outChatDiv = createElement(html, 'out');
-    outChatDiv.querySelector("p").textContent = userText;
-    chatContainer.appendChild(outChatDiv)
+    const outChatDiv = createElement(html,"out");
+    outChatDiv.querySelector("p").textContent = userText; 
+    chatContainer.appendChild(outChatDiv);
 
     setTimeout(showTypingAnimation, 500);
 }
