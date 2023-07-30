@@ -3,6 +3,7 @@ const sendBtn = document.querySelector("#sendButton");
 const chatContainer = document.querySelector("#chat_container");
 
 let userText = null
+const API_KEY = "";
 
 const createElement = (html, className) => {
     // Create new div and apply caht specified calss and set html content to div
@@ -13,7 +14,33 @@ const createElement = (html, className) => {
     // Retruning the chatDiv
 }
 
+const getChatResponse = async() => {
+    const API_URL = "https://api.openai.com/v1/completions"; 
 
+    // Setting up the properties of API request
+    const requestOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type" : "application/json",
+            "Authorization": `Bearer ${API_KEY}`
+        },
+        body: JSON.stringify({
+            model: "text-davinci-003",
+            prompt: userText,
+            max_tokens: 2048,
+            temprature: 0.2,
+            n: 1,
+            stop: null
+        })
+    }
+
+    try{
+        const response = await(await fetch(API_URL, requestOptions)).JSON();
+        console.log(response);
+    } catch(error){
+        console.log(error);
+    }
+}
 
 const showTypingAnimation = () => {
     const html = `<div class="chat_content">
@@ -33,7 +60,7 @@ const showTypingAnimation = () => {
     const outChatDiv = createElement(html, 'in');
     chatContainer.appendChild(outChatDiv)
 
-    
+    getChatResponse();
 }
 
 const handleOutchat = (e) => {
