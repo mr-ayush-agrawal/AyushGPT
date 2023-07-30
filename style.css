@@ -94,7 +94,7 @@ body {
 }
 
 /* This action will be performed when we hover over the icon */
-.chat:hover .chat_content span{
+.chat:hover .chat_content:not(:has(.typingAnimation)) span{
     visibility: visible;
 }
 
