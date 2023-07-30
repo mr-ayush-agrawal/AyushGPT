@@ -228,3 +228,25 @@ textarea:valid ~ span {
     bottom: 0;
     visibility: hidden;
 }
+
+
+/* Styling the Default text */
+.defaultText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    padding: 0 10px;
+    text-align: center;
+    color: var(--text-color);   
+}
+
+.defaultText h1 {
+    font-size: 3.3rem;
+}
+
+.defaultText p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
