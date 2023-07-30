@@ -2,6 +2,7 @@ const chatInput = document.querySelector("#Chat_Input");
 const sendBtn = document.querySelector("#sendButton");
 const chatContainer = document.querySelector(".chat_container");
 const themeBtn = document.querySelector("#themeButton");
+const delBtn = document.querySelector("#delButton");
 
 let userText = null
 const API_KEY = "";
@@ -130,5 +131,13 @@ themeBtn.addEventListener("click", () => {
     localStorage.setItem("theme-color",themeBtn.innerText);
     themeBtn.innerText = document.body.classList.contains("lightMode") ? "dark_mode" : "light_mode"
 });
+
+delBtn.addEventListener("click", () => {
+    if (confirm("Are you sure you want to delete all the chats?")) {
+        // Remove the chats from local storageand call loadDataFromLocalStorage  function
+        localStorage.removeItem("all-chats");
+        loadDataFromLocalStorage();
+    }
+})
 
 sendBtn.addEventListener("click", handleOutchat);
