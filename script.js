@@ -1,6 +1,7 @@
 const chatInput = document.querySelector("#Chat_Input");
 const sendBtn = document.querySelector("#sendButton");
 const chatContainer = document.querySelector(".chat_container");
+const themeBtn = document.querySelector("#themeButton");
 
 let userText = null
 const API_KEY = "";
@@ -112,6 +113,9 @@ const handleOutchat = () => {
     setTimeout(showTypingAnimation, 500);
 }
 
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("lightMode");
+    themeBtn.innerText = document.body.classList.contains("lightMode") ? "dark_mode" : "light_mode"
+});
+
 sendBtn.addEventListener("click", handleOutchat);
-
-
