@@ -94,7 +94,7 @@ body {
 }
 
 /* This action will be performed when we hover over the icon */
-.chat:hover .chat_content:not(:has(.typingAnimation)) span{
+.chat:hover .chat_content:not(:has(.typingAnimation, .error)) span{
     visibility: visible;
 }
 
@@ -105,6 +105,10 @@ body {
     font-size: 1.05rem;
     white-space: pre-wrap;
     word-break: break-word;
+}
+
+.chat .chat_details p.error {
+    color: #e55865;
 }
 
 .chat .chat_details img{

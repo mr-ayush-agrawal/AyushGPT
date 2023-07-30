@@ -61,7 +61,9 @@ const getChatResponse = async(inChatDiv) => {
         pElement.textContent = response.choices[0].text.trim();
         // console.log(response);
     } catch(error){
-        console.log(error);
+        // console.log(error);
+        pElement.classList.add("error");
+        pElement.textContent = "Oops ! Something went wrong while reteriving the response. Please Try again"
     }
 
 
