@@ -5,6 +5,12 @@ const chatContainer = document.querySelector(".chat_container");
 let userText = null
 const API_KEY = "";
 
+const loadDataFromLocalStorage = () => {
+    chatContainer.innerHTML =  localStorage.getItem("all-chats");
+}
+
+loadDataFromLocalStorage();
+
 const createElement = (html, className) => {
     // Create new div and apply caht specified calss and set html content to div
     const chatDiv = document.createElement("div");
@@ -44,8 +50,14 @@ const getChatResponse = async(inChatDiv) => {
         console.log(error);
     }
 
+
+    // Removing the typing animation, append the paragraph and save it to local storage
     inChatDiv.querySelector(".typingAnimation").remove();
     inChatDiv.querySelector(".chat_details").appendChild(pElement);
+
+    // Saving the responses in local system
+    localStorage.setItem("all-chats",chatContainer.innerHTML);
+
 }
 
 const copyResonse = (copyBtn) => {
