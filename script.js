@@ -15,6 +15,27 @@ const createElement = (html, className) => {
 
 
 
+const showTypingAnimation = () => {
+    const html = `<div class="chat_content">
+                     <div class="chat_details">
+                        <img src="Files/ChatGPT.png" alt="User Profile Image">
+                        <!-- Creating Typing animation -->
+                        <div class="typingAnimation">
+                            <div class="Dot" style="--delay: 0.2s"></div>
+                            <div class="Dot" style="--delay: 0.3s"></div>
+                            <div class="Dot" style="--delay: 0.4s"></div>
+                        </div> 
+                    </div>
+                    <span class="material-symbols-rounded">content_copy</span>
+                </div>`;
+
+    // create an in chat div with typing animation and append it to the chat container
+    const outChatDiv = createElement(html, 'in');
+    chatContainer.appendChild(outChatDiv)
+
+    
+}
+
 const handleOutchat = (e) => {
     userText = chatInput.value.trim();  // Gets the chat input and removes extra spaces
     console.log(userText);
