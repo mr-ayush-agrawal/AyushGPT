@@ -2,6 +2,7 @@ HTML
 We need to link the files that we are using in the program in the head 
     We use the <link> tag to do so.
     We have to define the relation and reference
+    We also have to link the js file for controling the event flow
 
     Here linking the following files   
         - Style for CSS styling
@@ -29,3 +30,8 @@ Till here we were setting up the variables and now we will style
         Disabling the selection
     .chat:hover -> is applicable when it is hovered to chat selection
 We Created the dots and animated them as per the required animation
+
+
+JavaScript
+First we create the variables for all the elements and mdify them as per the need
+    chatInput.value.trim -> Gets the input

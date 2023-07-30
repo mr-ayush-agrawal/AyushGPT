@@ -90,6 +90,7 @@ body {
     color: var(--icon-color);
     visibility: hidden;
     font-size: 1.3rem;
+    cursor: pointer;
 }
 
 /* This action will be performed when we hover over the icon */
@@ -102,6 +103,8 @@ body {
     padding: 0 50px 0 25px;
     white-space: pre-wrap;
     font-size: 1.05rem;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 .chat .chat_details img{
@@ -132,6 +135,10 @@ span.material-symbols-rounded {
 .typingAnimation {
     display: inline-flex;
     padding-left: 25px;
+}
+
+.typingAnimation .Dot:first-child {
+    margin-left: 0;
 }
 
 @keyframes animateDots {

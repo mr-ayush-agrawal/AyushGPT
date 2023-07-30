@@ -8,10 +8,11 @@
     <!-- Linking the files and  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
+    <script scr="script.js" defer></script>
 </head>
 <body>
     <div class="chat_container">
-        <div class="chat out">
+        <!-- <div class="chat out">
             <div class="chat_content">
                 <div class="chat_details">
                     <img src="Files/user.png" alt="User Profile Image">
@@ -34,7 +35,7 @@
             <div class="chat_content">
                 <div class="chat_details">
                     <img src="Files/ChatGPT.png" alt="User Profile Image">
-                    <!-- Creating Typing animation -->
+                    <!-- Creating Typing animation -del->
                     <div class="typingAnimation">
                         <div class="Dot" style="--delay: 0.2s"></div>
                         <div class="Dot" style="--delay: 0.3s"></div>
@@ -43,90 +44,14 @@
                 </div>
                 <span class="material-symbols-rounded">content_copy</span>
             </div>
-        </div>
-
-        <div class="chat out">
-            <div class="chat_content">
-                <div class="chat_details">
-                    <img src="Files/user.png" alt="User Profile Image">
-                    <p>Lorem expedita, corporis libero? Lorem ipsum dolor sit amet. Exercitationem, harum autem.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="chat in">
-            <div class="chat_content">
-                <div class="chat_details">
-                    <img src="Files/ChatGPT.png" alt="User Profile Image">
-                    <p>Lorem natus ad officiis exercitationem eligendi odio minus. Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-                </div>
-                <span class="material-symbols-rounded">content_copy</span>
-            </div>
-        </div>
-
-        <div class="chat out">
-            <div class="chat_content">
-                <div class="chat_details">
-                    <img src="Files/user.png" alt="User Profile Image">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quod.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="chat in">
-            <div class="chat_content">
-                <div class="chat_details">
-                    <img src="Files/ChatGPT.png" alt="User Profile Image">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-                <span class="material-symbols-rounded">content_copy</span>
-            </div>
-        </div>
-
-        <div class="chat out">
-            <div class="chat_content">
-                <div class="chat_details">
-                    <img src="Files/user.png" alt="User Profile Image">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="chat in">
-            <div class="chat_content">
-                <div class="chat_details">
-                    <img src="Files/ChatGPT.png" alt="User Profile Image">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, harum aspernatur?</p>
-                </div>
-                <span class="material-symbols-rounded">content_copy</span>
-            </div>
-        </div>
-
-        <div class="chat out">
-            <div class="chat_content">
-                <div class="chat_details">
-                    <img src="Files/user.png" alt="User Profile Image">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora voluptatem a autem quod qui quae.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="chat in">
-            <div class="chat_content">
-                <div class="chat_details">
-                    <img src="Files/ChatGPT.png" alt="User Profile Image">
-                    <p>Image can be seen Now</p>
-                </div>
-                <span class="material-symbols-rounded">content_copy</span>
-            </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- Creating the bottom typing box -->
     <div class="typingContainer">
         <div class="typingContent">
             <div class="textBox">
-                <textarea id="Chai_Input" placeholder="Enter the prompt here" required></textarea>
+                <textarea id="Chat_Input" placeholder="Enter the prompt here" required></textarea>
                 <span id="sendButton" class="material-symbols-rounded">send</span>
             </div>
             <div class="typingControl">
